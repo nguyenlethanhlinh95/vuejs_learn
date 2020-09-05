@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Hello, {{ name }}</h1>
+        <input type="text" name="name" v-model="name">
+        <button @click="greet">Submit</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        new Vue({
+           el: '#app',
+           data: {
+               name: 'Linh'
+           },
+            methods: {
+               greet: function (event) {
+                    alert(this.name);
+               }
+            }
+        });
+    </script>
+</body>
+</html>
